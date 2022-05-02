@@ -24,16 +24,16 @@
 
 ### Results
 #### Step 1
-<img src="images/S1.JPG"/>
+<img src="img/S1.JPG"/>
 
 #### Step 2
-<img src="images/S2.JPG"/>
+<img src="img/S2.JPG"/>
 
 #### Step 3
-<img src="images/S3.JPG"/>
+<img src="img/S3.JPG"/>
 
 #### Step 4
-<img src="images/S4.JPG"/>
+<img src="img/S4.JPG"/>
 
 <img src="results/tracking168.png"/>
 
