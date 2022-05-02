@@ -30,6 +30,7 @@ class Filter:
         ############
         # TODO Step 1: implement and return system matrix F
         ############
+        
         dt = params.dt
         return np.matrix([[1, 0, 0, dt, 0, 0],
                           [0, 1, 0, 0, dt, 0],
@@ -45,6 +46,7 @@ class Filter:
         ############
         # TODO Step 1: implement and return process noise covariance Q
         ############
+        
         dt = params.dt
         q = params.q
         q1 = ((dt**3)/3) * q 
@@ -65,6 +67,7 @@ class Filter:
         ############
         # TODO Step 1: predict state x and estimation error covariance P to next timestep, save x and P in track
         ############
+        
         F = self.F()
         track.set_x(F * track.x) 
         track.set_P(F * track.P * F.transpose() + self.Q())
@@ -77,6 +80,7 @@ class Filter:
         ############
         # TODO Step 1: update state x and covariance P with associated measurement, save x and P in track
         ############
+        
         H = meas.sensor.get_H(track.x)
         gamma = self.gamma(track, meas)
         S = self.S(track, meas, H)

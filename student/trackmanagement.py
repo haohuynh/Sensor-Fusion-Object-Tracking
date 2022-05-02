@@ -124,7 +124,7 @@ class Trackmanagement:
         # delete old tracks   
         for track in self.track_list:
             
-            # Rank the deletion based on the probability of possible events of appearing and disappearing
+            # rank the deletion based on the probability of possible events of appearing and disappearing
             
             if (track.state == 'confirmed') and (track.score < params.delete_threshold):
                 self.delete_track(track)
@@ -166,6 +166,7 @@ class Trackmanagement:
         # - increase track score
         # - set track state to 'tentative' or 'confirmed'
         ############
+        
         track.score += 1./params.window
         track.score = 1 if track.score > 1 else track.score
         track.state = 'confirmed' if track.score > params.confirmed_threshold  else 'tentative'
